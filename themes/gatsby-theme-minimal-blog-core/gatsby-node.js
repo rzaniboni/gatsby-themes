@@ -1,27 +1,7 @@
-const fs = require(`fs`)
 const kebabCase = require(`lodash.kebabcase`)
-const mkdirp = require(`mkdirp`)
-const path = require(`path`)
 const withDefaults = require(`./utils/default-options`)
 
-// Ensure that content directories exist at site-level
-// If non-existent they'll be created here (as empty folders)
-exports.onPreBootstrap = ({ reporter, store }, themeOptions) => {
-  const { program } = store.getState()
-
-  const { postsPath, pagesPath } = withDefaults(themeOptions)
-
-  const dirs = [path.join(program.directory, postsPath), path.join(program.directory, pagesPath)]
-
-  dirs.forEach(dir => {
-    if (!fs.existsSync(dir)) {
-      reporter.info(`Initializing "${dir}" directory`)
-      mkdirp.sync(dir)
-    }
-  })
-}
-
-const mdxResolverPassthrough = fieldName => async (source, args, context, info) => {
+const mdxResolverPassthrough = (fieldName) => async (source, args, context, info) => {
   const type = info.schema.getType(`Mdx`)
   const mdxNode = context.nodeModel.getNodeById({
     id: source.parent,
@@ -40,7 +20,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
 
   const { basePath } = withDefaults(themeOptions)
 
-  const slugify = source => {
+  const slugify = (source) => {
     const slug = source.slug ? source.slug : kebabCase(source.title)
 
     return `/${basePath}/${slug}`.replace(/\/\/+/g, `/`)
@@ -76,7 +56,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
       excerpt(pruneLength: Int = 160): String!
       body: String!
       html: String
-      timeToRead: Int!
+      timeToRead: Int
       tags: [PostTag]
       banner: File @fileByRelativePath
       description: String
@@ -102,7 +82,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
       excerpt(pruneLength: Int = 140): String! @mdxpassthrough(fieldName: "excerpt")
       body: String! @mdxpassthrough(fieldName: "body")
       html: String! @mdxpassthrough(fieldName: "html")
-      timeToRead: Int! @mdxpassthrough(fieldName: "timeToRead")
+      timeToRead: Int @mdxpassthrough(fieldName: "timeToRead")
       tags: [PostTag]
       banner: File @fileByRelativePath
       description: String
@@ -197,7 +177,7 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
     let modifiedTags
 
     if (node.frontmatter.tags) {
-      modifiedTags = node.frontmatter.tags.map(tag => ({
+      modifiedTags = node.frontmatter.tags.map((tag) => ({
         name: tag,
         slug: kebabCase(tag),
       }))
@@ -271,16 +251,22 @@ const tagsTemplate = require.resolve(`./src/templates/tags-query.tsx`)
 exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   const { createPage } = actions
 
-  const { basePath, blogPath, tagsPath } = withDefaults(themeOptions)
+  const { basePath, blogPath, tagsPath, formatString } = withDefaults(themeOptions)
 
   createPage({
     path: basePath,
     component: homepageTemplate,
+    context: {
+      formatString,
+    },
   })
 
   createPage({
     path: `/${basePath}/${blogPath}`.replace(/\/\/+/g, `/`),
     component: blogTemplate,
+    context: {
+      formatString,
+    },
   })
 
   createPage({
@@ -315,12 +301,13 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
 
   const posts = result.data.allPost.nodes
 
-  posts.forEach(post => {
+  posts.forEach((post) => {
     createPage({
       path: post.slug,
       component: postTemplate,
       context: {
         slug: post.slug,
+        formatString,
       },
     })
   })
@@ -328,7 +315,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   const pages = result.data.allPage.nodes
 
   if (pages.length > 0) {
-    pages.forEach(page => {
+    pages.forEach((page) => {
       createPage({
         path: `/${basePath}/${page.slug}`.replace(/\/\/+/g, `/`),
         component: pageTemplate,
@@ -342,13 +329,14 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   const tags = result.data.tags.group
 
   if (tags.length > 0) {
-    tags.forEach(tag => {
+    tags.forEach((tag) => {
       createPage({
         path: `/${basePath}/${tagsPath}/${kebabCase(tag.fieldValue)}`.replace(/\/\/+/g, `/`),
         component: tagTemplate,
         context: {
           slug: kebabCase(tag.fieldValue),
           name: tag.fieldValue,
+          formatString,
         },
       })
     })

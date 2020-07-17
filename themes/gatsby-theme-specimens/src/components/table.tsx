@@ -11,7 +11,7 @@ type TableProps = {
   children: React.ReactNode
 }
 
-const Table = ({ className, columns, titles, children }: TableProps) => (
+const Table = ({ className = ``, columns, titles, children }: TableProps) => (
   <div
     sx={{
       div: { alignSelf: `center` },
@@ -44,7 +44,7 @@ const Table = ({ className, columns, titles, children }: TableProps) => (
         },
       }}
     >
-      {titles.map(title => (
+      {titles.map((title) => (
         <div key={title}>
           <Badge>{title}</Badge>
         </div>

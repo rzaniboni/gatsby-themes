@@ -1,27 +1,7 @@
-const fs = require(`fs`)
 const kebabCase = require(`lodash.kebabcase`)
-const mkdirp = require(`mkdirp`)
-const path = require(`path`)
 const withDefaults = require(`./utils/default-options`)
 
-// Ensure that content directories exist at site-level
-// If non-existent they'll be created here (as empty folders)
-exports.onPreBootstrap = ({ reporter, store }, themeOptions) => {
-  const { program } = store.getState()
-
-  const { projectsPath, pagesPath } = withDefaults(themeOptions)
-
-  const dirs = [path.join(program.directory, projectsPath), path.join(program.directory, pagesPath)]
-
-  dirs.forEach(dir => {
-    if (!fs.existsSync(dir)) {
-      reporter.info(`Initializing "${dir}" directory`)
-      mkdirp.sync(dir)
-    }
-  })
-}
-
-const mdxResolverPassthrough = fieldName => async (source, args, context, info) => {
+const mdxResolverPassthrough = (fieldName) => async (source, args, context, info) => {
   const type = info.schema.getType(`Mdx`)
   const mdxNode = context.nodeModel.getNodeById({
     id: source.parent,
@@ -40,7 +20,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
 
   const { basePath } = withDefaults(themeOptions)
 
-  const slugify = source => {
+  const slugify = (source) => {
     const slug = source.slug ? source.slug : kebabCase(source.title)
 
     return `/${basePath}/${slug}`.replace(/\/\/+/g, `/`)
@@ -195,7 +175,7 @@ const pageTemplate = require.resolve(`./src/templates/page-query.tsx`)
 exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   const { createPage } = actions
 
-  const { basePath } = withDefaults(themeOptions)
+  const { basePath, formatString } = withDefaults(themeOptions)
 
   createPage({
     path: basePath,
@@ -224,12 +204,13 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
 
   const projects = result.data.allProject.nodes
 
-  projects.forEach(project => {
+  projects.forEach((project) => {
     createPage({
       path: project.slug,
       component: projectTemplate,
       context: {
         slug: project.slug,
+        formatString,
       },
     })
   })
@@ -237,7 +218,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   const pages = result.data.allPage.nodes
 
   if (pages.length > 0) {
-    pages.forEach(page => {
+    pages.forEach((page) => {
       createPage({
         path: page.slug,
         component: pageTemplate,

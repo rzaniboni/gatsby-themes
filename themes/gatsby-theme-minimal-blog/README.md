@@ -64,17 +64,20 @@ gatsby new minimal-blog LekoArts/gatsby-starter-minimal-blog
 
 ### Theme options
 
-| Key               | Default Value   | Description                                                                                               |
-| ----------------- | --------------- | --------------------------------------------------------------------------------------------------------- |
-| `basePath`        | `/`             | Root url for the theme                                                                                    |
-| `blogPath`        | `/blog`         | url for the blog post overview page                                                                       |
-| `tagsPath`        | `/tags`         | url for the tags overview page and prefix for tags (e.g. `/tags/my-tag`)                                  |
-| `postsPath`       | `content/posts` | Location of posts                                                                                         |
-| `pagesPath`       | `content/pages` | Location of additional pages (optional)                                                                   |
-| `mdx`             | `true`          | Configure `gatsby-plugin-mdx` (if your website already is using the plugin pass `false` to turn this off) |
-| `showLineNumbers` | `true`          | Show line numbers in code blocks                                                                          |
-| `navigation`      | `[]`            | Add links to your internal sites to the left part of the header                                           |
-| `externalLinks`   | `[]`            | Add links to your external sites to the right part of the header                                          |
+| Key               | Default Value                                        | Description                                                                                                |
+| ----------------- | ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `basePath`        | `/`                                                  | Root url for the theme                                                                                     |
+| `blogPath`        | `/blog`                                              | url for the blog post overview page                                                                        |
+| `tagsPath`        | `/tags`                                              | url for the tags overview page and prefix for tags (e.g. `/tags/my-tag`)                                   |
+| `postsPath`       | `content/posts`                                      | Location of posts                                                                                          |
+| `pagesPath`       | `content/pages`                                      | Location of additional pages (optional)                                                                    |
+| `mdx`             | `true`                                               | Configure `gatsby-plugin-mdx` (if your website already is using the plugin pass `false` to turn this off)  |
+| `formatString`    | `DD.MM.YYYY`                                         | Configure the date format for Date fields                                                                  |
+| `showLineNumbers` | `true`                                               | Show line numbers in code blocks                                                                           |
+| `navigation`      | `[]`                                                 | Add links to your internal sites to the left part of the header                                            |
+| `externalLinks`   | `[]`                                                 | Add links to your external sites to the right part of the header                                           |
+| `feed`            | `true`                                               | Configure `gatsby-plugin-feed` (if your website already is using the plugin pass `false` to turn this off) |
+| `feedTitle`       | `Minimal Blog - @lekoarts/gatsby-theme-minimal-blog` | Pass a string to the `title` option of `gatsby-plugin-feed`                                                |
 
 #### Example usage
 
@@ -89,26 +92,26 @@ module.exports = {
         navigation: [
           {
             title: `Blog`,
-            slug: `/blog`
+            slug: `/blog`,
           },
           {
             title: `About`,
-            slug: `/about`
-          }
+            slug: `/about`,
+          },
         ],
         externalLinks: [
           {
             name: `Twitter`,
-            url: `https://twitter.com/lekoarts_de`
+            url: `https://twitter.com/lekoarts_de`,
           },
           {
             name: `Instagram`,
-            url: `https://www.instagram.com/lekoarts.de/`
-          }
-        ]
-      }
-    }
-  ]
+            url: `https://www.instagram.com/lekoarts.de/`,
+          },
+        ],
+      },
+    },
+  ],
 };
 ```
 
@@ -140,21 +143,21 @@ module.exports = {
     externalLinks: [
       {
         name: `Twitter`,
-        url: `https://twitter.com/lekoarts_de`
+        url: `https://twitter.com/lekoarts_de`,
       },
       {
         name: `Instagram`,
-        url: `https://www.instagram.com/lekoarts.de/`
-      }
+        url: `https://www.instagram.com/lekoarts.de/`,
+      },
     ],
     // Navigation links
     navigation: [
       {
         title: `Blog`,
-        slug: `/blog`
-      }
-    ]
-  }
+        slug: `/blog`,
+      },
+    ],
+  },
 };
 ```
 
@@ -294,6 +297,4 @@ To edit the projects part below "Latest posts", create a file at `src/@lekoarts/
 
 Thanks for using this project! I'm always interested in seeing what people do with my projects, so don't hesitate to tag me on [Twitter](https://twitter.com/lekoarts_de) and share the project with me.
 
-Please star this project, share it on Social Media or consider supporting me on [Patreon](https://www.patreon.com/lekoarts)!
-
-If you want to hire me for **contract/freelance work**, you can do so! [Get in touch with me!](https://www.lekoarts.de/en/contact)
+Please star this project, share it on Social Media or consider supporting me on [Patreon](https://www.patreon.com/lekoarts) or [GitHub Sponsor](https://github.com/sponsors/LekoArts)!

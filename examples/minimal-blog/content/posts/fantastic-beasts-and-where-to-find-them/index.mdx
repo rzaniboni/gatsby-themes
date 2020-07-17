@@ -49,6 +49,55 @@ var treePromise = new Promise(function(resolve) {
 });
 ```
 
+A code block with a JSDoc comment, short, and long comment:
+
+```js
+/**
+ * Get value out of string (e.g. rem => px)
+ * If value is px strip the px part
+ * If the input is already a number only return that value
+ * @param {string | number} input
+ * @param {number} [rootFontSize]
+ * @return {number} Number without last three characters
+ * @example removeLastThree('6rem') => 6
+ */
+const getValue = (input, rootFontSize = 16) => {
+  if (typeof input === `number`) {
+    return input / rootFontSize;
+  }
+
+  const isPxValue = input.slice(-2) === `px`;
+
+  if (isPxValue) {
+    return parseFloat(input.slice(0, -2));
+  }
+
+  return parseFloat(input.slice(0, -3));
+};
+
+// This is a little helper function
+const helper = (a, b) => a + b;
+
+// This is also a little helper function but this time with a really long one-line comment that should show some more details
+const morehelper = (a, b) => a * b;
+
+export { getValue, helper, morehelper };
+```
+
+Normal block without language:
+
+```
+import Test from "../components/test"
+
+const Layout = ({ children }) => (
+  <Test>
+    {children}
+  </Test>
+)
+
+export default Layout
+```
+
 Code block with code highlighting:
 
 ```jsx:title=src/components/post.jsx {5-7,10}
@@ -64,7 +113,7 @@ const Post = ({ data: { post } }) => (
         color: `secondary`,
         mt: 3,
         a: { color: `secondary` },
-        fontSize: [1, 1, 2]
+        fontSize: [1, 1, 2],
       }}
     >
       <span>{post.date}</span>
@@ -79,7 +128,7 @@ const Post = ({ data: { post } }) => (
       sx={{
         ...CodeStyles,
         my: 5,
-        ".gatsby-resp-image-wrapper": { my: 5, boxShadow: `lg` }
+        ".gatsby-resp-image-wrapper": { my: 5, boxShadow: `lg` },
       }}
     >
       <MDXRenderer>{post.body}</MDXRenderer>

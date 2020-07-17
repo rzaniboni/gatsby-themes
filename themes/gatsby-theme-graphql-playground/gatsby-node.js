@@ -1,24 +1,4 @@
-const fs = require(`fs`)
-const mkdirp = require(`mkdirp`)
-const path = require(`path`)
 const withDefaults = require(`./utils/default-options`)
-
-// Ensure that content directories exist at site-level
-// If non-existent they'll be created here (as empty folders)
-exports.onPreBootstrap = ({ reporter, store }, themeOptions) => {
-  const { program } = store.getState()
-
-  const { docsPath } = withDefaults(themeOptions)
-
-  const dirs = [path.join(program.directory, docsPath)]
-
-  dirs.forEach(dir => {
-    if (!fs.existsSync(dir)) {
-      reporter.info(`Initializing "${dir}" directory`)
-      mkdirp.sync(dir)
-    }
-  })
-}
 
 const mdxResolverPassthrough = async ({ fieldName, source, args, context, info }) => {
   const type = info.schema.getType(`Mdx`)
@@ -72,6 +52,7 @@ exports.createSchemaCustomization = ({ actions }) => {
   `)
 }
 
+// Find the 'graphql' code tags and add an encoded string to the field 'query'
 exports.createResolvers = ({ createResolvers }) => {
   const resolvers = {
     MdxPlayground: {
@@ -79,7 +60,7 @@ exports.createResolvers = ({ createResolvers }) => {
         async resolve(source, args, context, info) {
           const node = await mdxResolverPassthrough({ fieldName: `mdxAST`, source, args, context, info })
           const block = node.children.find(
-            ast => ast.type === `code` && ast.lang === `graphql` && ast.meta === `preview`
+            (ast) => ast.type === `code` && ast.lang === `graphql` && ast.meta === `preview`
           )
 
           return encodeURI(block.value)
@@ -166,7 +147,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   const items = result.data.allPlayground.nodes
 
   if (items.length > 0) {
-    items.forEach(page => {
+    items.forEach((page) => {
       createPage({
         path: page.slug,
         component: itemTemplate,

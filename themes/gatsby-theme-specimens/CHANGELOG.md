@@ -3,6 +3,190 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.3.0](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-specimens@2.2.8...@lekoarts/gatsby-theme-specimens@2.3.0) (2020-07-09)
+
+
+### Features
+
+* Add bundle-analyzer and lazy-load react-live ([#450](https://github.com/LekoArts/gatsby-themes/issues/450)) ([667fd33](https://github.com/LekoArts/gatsby-themes/commit/667fd33ce6af546cf2250af1e22395a26f45d6a2))
+
+
+
+
+
+## [2.2.8](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-specimens@2.2.7...@lekoarts/gatsby-theme-specimens@2.2.8) (2020-07-09)
+
+**Note:** Version bump only for package @lekoarts/gatsby-theme-specimens
+
+
+
+
+
+## [2.2.7](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-specimens@2.2.6...@lekoarts/gatsby-theme-specimens@2.2.7) (2020-07-03)
+
+
+### Bug Fixes
+
+* **deps:** update packages ([#437](https://github.com/LekoArts/gatsby-themes/issues/437)) ([5e27caf](https://github.com/LekoArts/gatsby-themes/commit/5e27caf74c2eae0e7c158fa5a15bd52ae2069ee7))
+* Set default values and replace defaultProps ([#436](https://github.com/LekoArts/gatsby-themes/issues/436)) ([d62857f](https://github.com/LekoArts/gatsby-themes/commit/d62857ffd1d2d97cfa31cb6ca37cb39db48467d0))
+
+
+
+
+
+## [2.2.6](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-specimens@2.2.5...@lekoarts/gatsby-theme-specimens@2.2.6) (2020-07-02)
+
+
+### Bug Fixes
+
+* **deps:** update packages ([#429](https://github.com/LekoArts/gatsby-themes/issues/429)) ([f25dfb6](https://github.com/LekoArts/gatsby-themes/commit/f25dfb6105669f62468abc63ceb73c2fbbb73065))
+
+
+
+
+
+## [2.2.5](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-specimens@2.2.4...@lekoarts/gatsby-theme-specimens@2.2.5) (2020-06-08)
+
+
+### Bug Fixes
+
+* **deps:** update packages ([#408](https://github.com/LekoArts/gatsby-themes/issues/408)) ([11b89ad](https://github.com/LekoArts/gatsby-themes/commit/11b89ad8bb0a59dc3fe95941bca57d83a1716e80))
+
+
+
+
+
+## [2.2.4](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-specimens@2.2.3...@lekoarts/gatsby-theme-specimens@2.2.4) (2020-05-29)
+
+
+### Bug Fixes
+
+* **deps:** update packages ([#403](https://github.com/LekoArts/gatsby-themes/issues/403)) ([4275401](https://github.com/LekoArts/gatsby-themes/commit/427540138f6c8687dfff4163679a222ba5d49c8f))
+
+
+
+
+
+## [2.2.3](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-specimens@2.2.2...@lekoarts/gatsby-theme-specimens@2.2.3) (2020-05-12)
+
+**Note:** Version bump only for package @lekoarts/gatsby-theme-specimens
+
+
+
+
+
+## [2.2.2](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-specimens@2.2.1...@lekoarts/gatsby-theme-specimens@2.2.2) (2020-05-04)
+
+
+### Bug Fixes
+
+* **deps:** update packages ([#394](https://github.com/LekoArts/gatsby-themes/issues/394)) ([c047fce](https://github.com/LekoArts/gatsby-themes/commit/c047fce748e9c85604a5fb2f104918d455b96580))
+
+
+
+
+
+## [2.2.1](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-specimens@2.2.0...@lekoarts/gatsby-theme-specimens@2.2.1) (2020-04-28)
+
+
+### Bug Fixes
+
+* **deps:** update gatsby ([#378](https://github.com/LekoArts/gatsby-themes/issues/378)) ([8238565](https://github.com/LekoArts/gatsby-themes/commit/82385658f18c983b4ca4d83233660e9f4492a4a9))
+
+
+
+
+
+# [2.2.0](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-specimens@2.1.8...@lekoarts/gatsby-theme-specimens@2.2.0) (2020-04-27)
+
+
+### Features
+
+* Update theme-ui to v0.3.x ([#371](https://github.com/LekoArts/gatsby-themes/issues/371)) ([67a05ac](https://github.com/LekoArts/gatsby-themes/commit/67a05ac3e1deaddfe38591739e7f50f56d49d109)), closes [/theme-ui.com/migrating#v03](https://github.com//theme-ui.com/migrating/issues/v03) [#262](https://github.com/LekoArts/gatsby-themes/issues/262)
+
+
+
+
+
+## [2.1.8](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-specimens@2.1.7...@lekoarts/gatsby-theme-specimens@2.1.8) (2020-04-24)
+
+
+### Bug Fixes
+
+* **deps:** update dependency polished to ^3.5.2 ([#363](https://github.com/LekoArts/gatsby-themes/issues/363)) ([f66e5ef](https://github.com/LekoArts/gatsby-themes/commit/f66e5ef942a22b626a8ea6a01e98189e27cb7968))
+* **deps:** update gatsby ([#364](https://github.com/LekoArts/gatsby-themes/issues/364)) ([aac08a8](https://github.com/LekoArts/gatsby-themes/commit/aac08a809b86de28f78d2db95dc5651a0a8e640b))
+
+
+
+
+
+## [2.1.7](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-specimens@2.1.6...@lekoarts/gatsby-theme-specimens@2.1.7) (2020-04-12)
+
+**Note:** Version bump only for package @lekoarts/gatsby-theme-specimens
+
+
+
+
+
+## [2.1.6](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-specimens@2.1.5...@lekoarts/gatsby-theme-specimens@2.1.6) (2020-04-01)
+
+**Note:** Version bump only for package @lekoarts/gatsby-theme-specimens
+
+
+
+
+
+## [2.1.5](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-specimens@2.1.4...@lekoarts/gatsby-theme-specimens@2.1.5) (2020-03-31)
+
+
+### Bug Fixes
+
+* **deps:** update dependency polished to ^3.5.1 ([#318](https://github.com/LekoArts/gatsby-themes/issues/318)) ([5e92c6a](https://github.com/LekoArts/gatsby-themes/commit/5e92c6accdb588d41cf19708c97e1a8b5eee4a47))
+* **deps:** update gatsby ([#305](https://github.com/LekoArts/gatsby-themes/issues/305)) ([f3a5e36](https://github.com/LekoArts/gatsby-themes/commit/f3a5e369b6ce1e3b6c046287fe0c1511fa9db758))
+* **deps:** update gatsby ([#312](https://github.com/LekoArts/gatsby-themes/issues/312)) ([5a93a50](https://github.com/LekoArts/gatsby-themes/commit/5a93a509d33cc1738de8cfb54a1690ae8dba3151))
+* **deps:** update gatsby ([#319](https://github.com/LekoArts/gatsby-themes/issues/319)) ([b7c3dcd](https://github.com/LekoArts/gatsby-themes/commit/b7c3dcdfd54a3cd8291b3dca3868be2af738c1a5))
+* **deps:** update gatsby ([#330](https://github.com/LekoArts/gatsby-themes/issues/330)) ([af9b834](https://github.com/LekoArts/gatsby-themes/commit/af9b834102b2e15689557c861f83902b3cb2a728))
+
+
+
+
+
+## [2.1.4](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-specimens@2.1.3...@lekoarts/gatsby-theme-specimens@2.1.4) (2020-03-04)
+
+
+### Bug Fixes
+
+* filterStyles & better checks in Heading ([#291](https://github.com/LekoArts/gatsby-themes/issues/291)) ([1f20d4b](https://github.com/LekoArts/gatsby-themes/commit/1f20d4ba18f6aed253559fc2a99d5333e0272bfd))
+* **deps:** update dependency @emotion/core to ^10.0.28 ([#296](https://github.com/LekoArts/gatsby-themes/issues/296)) ([8f92e72](https://github.com/LekoArts/gatsby-themes/commit/8f92e726a198026e1aa7917ab1161a941e166dbe))
+* **deps:** update gatsby ([#298](https://github.com/LekoArts/gatsby-themes/issues/298)) ([a904526](https://github.com/LekoArts/gatsby-themes/commit/a904526aed9c86fa291866fc85f0d0bca11112b6))
+
+
+
+
+
+## [2.1.3](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-specimens@2.1.2...@lekoarts/gatsby-theme-specimens@2.1.3) (2020-02-27)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @styled-system/css to ^5.1.5 ([#287](https://github.com/LekoArts/gatsby-themes/issues/287)) ([7a4385d](https://github.com/LekoArts/gatsby-themes/commit/7a4385dfcd1765d82ebb0371134462e45047f4ff))
+
+
+
+
+
+## [2.1.2](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-specimens@2.1.1...@lekoarts/gatsby-theme-specimens@2.1.2) (2020-02-16)
+
+
+### Bug Fixes
+
+* **deps:** update dependency polished to ^3.4.4 ([#247](https://github.com/LekoArts/gatsby-themes/issues/247)) ([850669a](https://github.com/LekoArts/gatsby-themes/commit/850669a7aae2e8f6199f99266e13da79ddf081c6))
+* **deps:** update gatsby ([#260](https://github.com/LekoArts/gatsby-themes/issues/260)) ([5a779f3](https://github.com/LekoArts/gatsby-themes/commit/5a779f32d548e0f4cfb63f6534f81c949123fa67))
+
+
+
+
+
 ## [2.1.1](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-specimens@2.1.0...@lekoarts/gatsby-theme-specimens@2.1.1) (2020-01-23)
 
 

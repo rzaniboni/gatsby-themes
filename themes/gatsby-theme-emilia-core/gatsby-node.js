@@ -1,27 +1,8 @@
-const fs = require(`fs`)
 const kebabCase = require(`lodash.kebabcase`)
-const mkdirp = require(`mkdirp`)
 const path = require(`path`)
 const withDefaults = require(`./utils/default-options`)
 
-// Ensure that content directories exist at site-level
-// If non-existent they'll be created here (as empty folders)
-exports.onPreBootstrap = ({ reporter, store }, themeOptions) => {
-  const { program } = store.getState()
-
-  const { projectsPath } = withDefaults(themeOptions)
-
-  const dirs = [path.join(program.directory, projectsPath)]
-
-  dirs.forEach(dir => {
-    if (!fs.existsSync(dir)) {
-      reporter.info(`Initializing "${dir}" directory`)
-      mkdirp.sync(dir)
-    }
-  })
-}
-
-const mdxResolverPassthrough = fieldName => async (source, args, context, info) => {
+const mdxResolverPassthrough = (fieldName) => async (source, args, context, info) => {
   const type = info.schema.getType(`Mdx`)
   const mdxNode = context.nodeModel.getNodeById({
     id: source.parent,
@@ -40,7 +21,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
 
   const { basePath } = withDefaults(themeOptions)
 
-  const slugify = source => {
+  const slugify = (source) => {
     const slug = source.slug ? source.slug : kebabCase(source.title)
 
     return `/${basePath}/${slug}`.replace(/\/\/+/g, `/`)
@@ -163,7 +144,7 @@ exports.sourceNodes = (
 ) => {
   const { createNode } = actions
 
-  const specimensConfig = {
+  const emiliaConfig = {
     name,
     location,
     socialMedia,
@@ -172,14 +153,14 @@ exports.sourceNodes = (
   }
 
   createNode({
-    ...specimensConfig,
+    ...emiliaConfig,
     id: `@lekoarts/gatsby-theme-emilia-core-config`,
     parent: null,
     children: [],
     internal: {
       type: `EmiliaConfig`,
-      contentDigest: createContentDigest(specimensConfig),
-      content: JSON.stringify(specimensConfig),
+      contentDigest: createContentDigest(emiliaConfig),
+      content: JSON.stringify(emiliaConfig),
       description: `Options for @lekoarts/gatsby-theme-emilia-core`,
     },
   })
@@ -192,7 +173,7 @@ const projectTemplate = require.resolve(`./src/templates/project-query.tsx`)
 exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   const { createPage } = actions
 
-  const { basePath } = withDefaults(themeOptions)
+  const { basePath, formatString } = withDefaults(themeOptions)
 
   createPage({
     path: basePath,
@@ -251,6 +232,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
         absolutePathRegex: `/^${path.dirname(fileAbsolutePath)}/`,
         prev,
         next,
+        formatString,
       },
     })
   })

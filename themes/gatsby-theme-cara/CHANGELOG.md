@@ -3,6 +3,247 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.10](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-cara@1.2.9...@lekoarts/gatsby-theme-cara@1.2.10) (2020-07-09)
+
+**Note:** Version bump only for package @lekoarts/gatsby-theme-cara
+
+
+
+
+
+## [1.2.9](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-cara@1.2.8...@lekoarts/gatsby-theme-cara@1.2.9) (2020-07-03)
+
+
+### Bug Fixes
+
+* **deps:** update packages ([#437](https://github.com/LekoArts/gatsby-themes/issues/437)) ([5e27caf](https://github.com/LekoArts/gatsby-themes/commit/5e27caf74c2eae0e7c158fa5a15bd52ae2069ee7))
+* Set default values and replace defaultProps ([#436](https://github.com/LekoArts/gatsby-themes/issues/436)) ([d62857f](https://github.com/LekoArts/gatsby-themes/commit/d62857ffd1d2d97cfa31cb6ca37cb39db48467d0))
+
+
+
+
+
+## [1.2.8](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-cara@1.2.7...@lekoarts/gatsby-theme-cara@1.2.8) (2020-07-02)
+
+
+### Bug Fixes
+
+* **deps:** update packages ([#429](https://github.com/LekoArts/gatsby-themes/issues/429)) ([f25dfb6](https://github.com/LekoArts/gatsby-themes/commit/f25dfb6105669f62468abc63ceb73c2fbbb73065))
+
+
+
+
+
+## [1.2.7](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-cara@1.2.6...@lekoarts/gatsby-theme-cara@1.2.7) (2020-06-11)
+
+
+### Bug Fixes
+
+* Normalize CSS in themes & examples ([#422](https://github.com/LekoArts/gatsby-themes/issues/422)) ([9a2600c](https://github.com/LekoArts/gatsby-themes/commit/9a2600cc45d0f6729799183116f1b87d3c943749))
+
+
+
+
+
+## [1.2.6](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-cara@1.2.5...@lekoarts/gatsby-theme-cara@1.2.6) (2020-06-08)
+
+
+### Bug Fixes
+
+* **deps:** update packages ([#408](https://github.com/LekoArts/gatsby-themes/issues/408)) ([11b89ad](https://github.com/LekoArts/gatsby-themes/commit/11b89ad8bb0a59dc3fe95941bca57d83a1716e80))
+
+
+
+
+
+## [1.2.5](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-cara@1.2.4...@lekoarts/gatsby-theme-cara@1.2.5) (2020-05-29)
+
+
+### Bug Fixes
+
+* **deps:** update packages ([#403](https://github.com/LekoArts/gatsby-themes/issues/403)) ([4275401](https://github.com/LekoArts/gatsby-themes/commit/427540138f6c8687dfff4163679a222ba5d49c8f))
+
+
+
+
+
+## [1.2.4](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-cara@1.2.3...@lekoarts/gatsby-theme-cara@1.2.4) (2020-05-12)
+
+**Note:** Version bump only for package @lekoarts/gatsby-theme-cara
+
+
+
+
+
+## [1.2.3](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-cara@1.2.2...@lekoarts/gatsby-theme-cara@1.2.3) (2020-05-04)
+
+
+### Bug Fixes
+
+* **deps:** update packages ([#394](https://github.com/LekoArts/gatsby-themes/issues/394)) ([c047fce](https://github.com/LekoArts/gatsby-themes/commit/c047fce748e9c85604a5fb2f104918d455b96580))
+
+
+
+
+
+## [1.2.2](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-cara@1.2.1...@lekoarts/gatsby-theme-cara@1.2.2) (2020-05-02)
+
+
+### Bug Fixes
+
+* Use correct ::selection colors ([f311851](https://github.com/LekoArts/gatsby-themes/commit/f311851e25c0c7bf40299ec3a7a430dc210bbdc9))
+
+
+
+
+
+## [1.2.1](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-cara@1.2.0...@lekoarts/gatsby-theme-cara@1.2.1) (2020-04-28)
+
+
+### Bug Fixes
+
+* **deps:** update gatsby ([#378](https://github.com/LekoArts/gatsby-themes/issues/378)) ([8238565](https://github.com/LekoArts/gatsby-themes/commit/82385658f18c983b4ca4d83233660e9f4492a4a9))
+
+
+
+
+
+# [1.2.0](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-cara@1.1.8...@lekoarts/gatsby-theme-cara@1.2.0) (2020-04-27)
+
+
+### Features
+
+* Update theme-ui to v0.3.x ([#371](https://github.com/LekoArts/gatsby-themes/issues/371)) ([67a05ac](https://github.com/LekoArts/gatsby-themes/commit/67a05ac3e1deaddfe38591739e7f50f56d49d109)), closes [/theme-ui.com/migrating#v03](https://github.com//theme-ui.com/migrating/issues/v03) [#262](https://github.com/LekoArts/gatsby-themes/issues/262)
+
+
+
+
+
+## [1.1.8](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-cara@1.1.7...@lekoarts/gatsby-theme-cara@1.1.8) (2020-04-24)
+
+
+### Bug Fixes
+
+* **deps:** update gatsby ([#364](https://github.com/LekoArts/gatsby-themes/issues/364)) ([aac08a8](https://github.com/LekoArts/gatsby-themes/commit/aac08a809b86de28f78d2db95dc5651a0a8e640b))
+
+
+
+
+
+## [1.1.7](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-cara@1.1.6...@lekoarts/gatsby-theme-cara@1.1.7) (2020-04-13)
+
+
+### Bug Fixes
+
+* **deps:** update dependency react-helmet to v6 ([#354](https://github.com/LekoArts/gatsby-themes/issues/354)) ([117d1d5](https://github.com/LekoArts/gatsby-themes/commit/117d1d5a6989d763c89137d8a9f0fb55f55efdee))
+
+
+
+
+
+## [1.1.6](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-cara@1.1.5...@lekoarts/gatsby-theme-cara@1.1.6) (2020-04-13)
+
+
+### Bug Fixes
+
+* **deps:** update gatsby ([#353](https://github.com/LekoArts/gatsby-themes/issues/353)) ([4550ff3](https://github.com/LekoArts/gatsby-themes/commit/4550ff3a79ba415a4f019019300fea47d24b16c8))
+
+
+
+
+
+## [1.1.5](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-cara@1.1.4...@lekoarts/gatsby-theme-cara@1.1.5) (2020-04-12)
+
+
+### Bug Fixes
+
+* Use withPrefix helper in SEO component ([#346](https://github.com/LekoArts/gatsby-themes/issues/346)) ([91fc16c](https://github.com/LekoArts/gatsby-themes/commit/91fc16c3c725a2d858ee093d761530975e2173d9))
+
+
+
+
+
+## [1.1.4](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-cara@1.1.3...@lekoarts/gatsby-theme-cara@1.1.4) (2020-04-12)
+
+
+### Bug Fixes
+
+* **deps:** update gatsby ([#343](https://github.com/LekoArts/gatsby-themes/issues/343)) ([6f4f07f](https://github.com/LekoArts/gatsby-themes/commit/6f4f07f0d6570610a3d17bb60472a52ac402693d))
+
+
+
+
+
+## [1.1.3](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-cara@1.1.2...@lekoarts/gatsby-theme-cara@1.1.3) (2020-04-01)
+
+**Note:** Version bump only for package @lekoarts/gatsby-theme-cara
+
+
+
+
+
+## [1.1.2](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-cara@1.1.1...@lekoarts/gatsby-theme-cara@1.1.2) (2020-03-31)
+
+
+### Bug Fixes
+
+* **deps:** update gatsby ([#305](https://github.com/LekoArts/gatsby-themes/issues/305)) ([f3a5e36](https://github.com/LekoArts/gatsby-themes/commit/f3a5e369b6ce1e3b6c046287fe0c1511fa9db758))
+* **deps:** update gatsby ([#312](https://github.com/LekoArts/gatsby-themes/issues/312)) ([5a93a50](https://github.com/LekoArts/gatsby-themes/commit/5a93a509d33cc1738de8cfb54a1690ae8dba3151))
+* **deps:** update gatsby ([#319](https://github.com/LekoArts/gatsby-themes/issues/319)) ([b7c3dcd](https://github.com/LekoArts/gatsby-themes/commit/b7c3dcdfd54a3cd8291b3dca3868be2af738c1a5))
+* **deps:** update gatsby ([#330](https://github.com/LekoArts/gatsby-themes/issues/330)) ([af9b834](https://github.com/LekoArts/gatsby-themes/commit/af9b834102b2e15689557c861f83902b3cb2a728))
+* **deps:** update mdx to ^1.5.8 ([#331](https://github.com/LekoArts/gatsby-themes/issues/331)) ([9580e68](https://github.com/LekoArts/gatsby-themes/commit/9580e681f589d60aa1384c5b8d9049ecbde70ea2))
+
+
+
+
+
+## [1.1.1](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-cara@1.1.0...@lekoarts/gatsby-theme-cara@1.1.1) (2020-03-04)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @emotion/core to ^10.0.28 ([#296](https://github.com/LekoArts/gatsby-themes/issues/296)) ([8f92e72](https://github.com/LekoArts/gatsby-themes/commit/8f92e726a198026e1aa7917ab1161a941e166dbe))
+* **deps:** update gatsby ([#297](https://github.com/LekoArts/gatsby-themes/issues/297)) ([1c2cd69](https://github.com/LekoArts/gatsby-themes/commit/1c2cd695d7e2abbc820ce81a37fc20f23ab9f7ce))
+* **deps:** update gatsby ([#298](https://github.com/LekoArts/gatsby-themes/issues/298)) ([a904526](https://github.com/LekoArts/gatsby-themes/commit/a904526aed9c86fa291866fc85f0d0bca11112b6))
+
+
+
+
+
+# [1.1.0](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-cara@1.0.20...@lekoarts/gatsby-theme-cara@1.1.0) (2020-02-29)
+
+
+### Features
+
+* Add factor prop to all sections ([e893a9b](https://github.com/LekoArts/gatsby-themes/commit/e893a9b60911f475017931ecd9841321cb3d4fa8))
+
+
+
+
+
+## [1.0.20](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-cara@1.0.19...@lekoarts/gatsby-theme-cara@1.0.20) (2020-02-27)
+
+
+### Bug Fixes
+
+* **deps:** update gatsby ([#278](https://github.com/LekoArts/gatsby-themes/issues/278)) ([8d8d8e4](https://github.com/LekoArts/gatsby-themes/commit/8d8d8e48bdeac04a07a74682cbadd4927b3ec101))
+* **deps:** update mdx to ^1.5.7 ([#288](https://github.com/LekoArts/gatsby-themes/issues/288)) ([feac925](https://github.com/LekoArts/gatsby-themes/commit/feac9250092047dce9a2d9bfe0fe56a53a547256))
+
+
+
+
+
+## [1.0.19](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-cara@1.0.18...@lekoarts/gatsby-theme-cara@1.0.19) (2020-02-16)
+
+
+### Bug Fixes
+
+* **deps:** update gatsby ([#260](https://github.com/LekoArts/gatsby-themes/issues/260)) ([5a779f3](https://github.com/LekoArts/gatsby-themes/commit/5a779f32d548e0f4cfb63f6534f81c949123fa67))
+
+
+
+
+
 ## [1.0.18](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-cara@1.0.17...@lekoarts/gatsby-theme-cara@1.0.18) (2020-01-23)
 
 

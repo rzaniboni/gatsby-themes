@@ -1,3 +1,4 @@
+import { merge } from "theme-ui"
 import { tailwind } from "@theme-ui/presets"
 
 const sharedButtonStyles = {
@@ -13,12 +14,10 @@ const sharedHeadingStyles = {
   color: `heading`,
 }
 
-export default {
-  ...tailwind,
-  initialColorMode: `light`,
+export default merge(tailwind, {
+  initialColorModeName: `light`,
   useCustomProperties: true,
   colors: {
-    ...tailwind.colors,
     primary: tailwind.colors.indigo[6],
     shadow: tailwind.colors.indigo[2],
     secondary: tailwind.colors.orange[5],
@@ -31,6 +30,7 @@ export default {
     dark: tailwind.colors.gray[7],
     muted: tailwind.colors.gray[5],
     light: tailwind.colors.gray[3],
+    starsCount: tailwind.colors.gray[7],
     model: {
       one: tailwind.colors.gray[2],
       two: tailwind.colors.gray[3],
@@ -66,6 +66,7 @@ export default {
         dark: tailwind.colors.gray[4],
         heading: `#000114`,
         light: `#842626`,
+        starsCount: tailwind.colors.gray[8],
         model: {
           one: `#000114`,
           two: `#000114`,
@@ -81,20 +82,35 @@ export default {
   },
   breakpoints: [`600px`, `900px`, `1200px`, `1800px`],
   radii: {
-    ...tailwind.radii,
     xl: `1rem`,
   },
-  styles: {
-    ...tailwind.styles,
-    Footer: {
+  layout: {
+    footer: {
       textAlign: `center`,
       display: `block`,
       color: `textMuted`,
       px: [2, 3],
       py: [4, 5],
     },
-    Container: {
+    container: {
       maxWidth: `1200px`,
+      padding: 4,
+    },
+  },
+  styles: {
+    root: {
+      margin: 0,
+      padding: 0,
+      boxSizing: `border-box`,
+      textRendering: `optimizeLegibility`,
+      fontSize: `18px`,
+      WebkitFontSmoothing: `antialiased`,
+      MozOsxFontSmoothing: `grayscale`,
+      color: `text`,
+      backgroundColor: `background`,
+      fontFamily: `body`,
+      lineHeight: `body`,
+      fontWeight: `body`,
     },
     p: {
       fontSize: [1, 2],
@@ -104,35 +120,29 @@ export default {
       "--x-height-multiplier": 0.35,
     },
     h1: {
-      ...tailwind.styles.h1,
       ...sharedHeadingStyles,
       fontSize: [5, 6],
       mt: 2,
     },
     h2: {
-      ...tailwind.styles.h2,
       ...sharedHeadingStyles,
       fontSize: [4, 5],
       mt: 2,
     },
     h3: {
-      ...tailwind.styles.h3,
       ...sharedHeadingStyles,
       fontSize: [3, 4],
       mt: 3,
     },
     h4: {
-      ...tailwind.styles.h4,
       ...sharedHeadingStyles,
       fontSize: [2, 3],
     },
     h5: {
-      ...tailwind.styles.h5,
       ...sharedHeadingStyles,
       fontSize: [1, 2],
     },
     h6: {
-      ...tailwind.styles.h6,
       ...sharedHeadingStyles,
       fontSize: 1,
       mb: 2,
@@ -142,20 +152,20 @@ export default {
     primary: {
       ...sharedButtonStyles,
       borderRadius: `full`,
-      backgroundImage: t => `linear-gradient(45deg, ${t.colors.indigo[6]}, ${t.colors.indigo[4]})`,
+      backgroundImage: (t) => `linear-gradient(45deg, ${t.colors.indigo[6]}, ${t.colors.indigo[4]})`,
       fontSize: [1, 2],
       px: 4,
       py: `0.6rem`,
-      boxShadow: t => `0px 10px 15px ${t.colors.shadow}`,
+      boxShadow: (t) => `0px 10px 15px ${t.colors.shadow}`,
       "&:hover": {
         transform: `translateY(-2px)`,
-        boxShadow: t => `0px 20px 25px ${t.colors.shadow}`,
+        boxShadow: (t) => `0px 20px 25px ${t.colors.shadow}`,
       },
     },
     secondary: {
       ...sharedButtonStyles,
       borderRadius: `full`,
-      backgroundImage: t => `linear-gradient(45deg, ${t.colors.gray[7]}, ${t.colors.gray[5]})`,
+      backgroundImage: (t) => `linear-gradient(45deg, ${t.colors.gray[7]}, ${t.colors.gray[5]})`,
       fontSize: 1,
       px: 4,
       py: 1,
@@ -164,12 +174,8 @@ export default {
         transform: `translateY(-1px)`,
       },
     },
-    newsletter: {
+    heroStars: {
       ...sharedButtonStyles,
-      borderRadius: `default`,
-      px: `1.25rem`,
-      py: `0.6rem`,
-      backgroundColor: `primary`,
       fontSize: 1,
       boxShadow: `default`,
       "&:hover": {
@@ -235,43 +241,43 @@ export default {
   },
   gradients: {
     blue: {
-      backgroundImage: t => `linear-gradient(45deg, ${t.colors.indigo[3]}, ${t.colors.indigo[5]})`,
+      backgroundImage: (t) => `linear-gradient(45deg, ${t.colors.indigo[3]}, ${t.colors.indigo[5]})`,
     },
     orange: {
-      backgroundImage: t => `linear-gradient(225deg, ${t.colors.orange[3]}, ${t.colors.orange[5]})`,
+      backgroundImage: (t) => `linear-gradient(225deg, ${t.colors.orange[3]}, ${t.colors.orange[5]})`,
     },
     pink: {
-      backgroundImage: t => `linear-gradient(135deg, ${t.colors.pink[4]}, ${t.colors.pink[6]})`,
+      backgroundImage: (t) => `linear-gradient(135deg, ${t.colors.pink[4]}, ${t.colors.pink[6]})`,
     },
     purple: {
-      backgroundImage: t => `linear-gradient(135deg, ${t.colors.purple[6]}, ${t.colors.purple[3]})`,
+      backgroundImage: (t) => `linear-gradient(135deg, ${t.colors.purple[6]}, ${t.colors.purple[3]})`,
     },
     gray: {
-      backgroundImage: t => `linear-gradient(135deg, ${t.colors.gray[5]}, ${t.colors.gray[7]})`,
+      backgroundImage: (t) => `linear-gradient(135deg, ${t.colors.gray[5]}, ${t.colors.gray[7]})`,
     },
     black: {
-      backgroundImage: t => `linear-gradient(135deg, ${t.colors.gray[7]}, ${t.colors.gray[9]})`,
+      backgroundImage: (t) => `linear-gradient(135deg, ${t.colors.gray[7]}, ${t.colors.gray[9]})`,
     },
     red: {
-      backgroundImage: t => `linear-gradient(225deg, ${t.colors.red[6]}, ${t.colors.red[3]})`,
+      backgroundImage: (t) => `linear-gradient(225deg, ${t.colors.red[6]}, ${t.colors.red[3]})`,
     },
     yellow: {
-      backgroundImage: t => `linear-gradient(180deg, ${t.colors.yellow[5]}, ${t.colors.yellow[6]})`,
+      backgroundImage: (t) => `linear-gradient(180deg, ${t.colors.yellow[5]}, ${t.colors.yellow[6]})`,
     },
     green: {
-      backgroundImage: t => `linear-gradient(225deg, ${t.colors.green[3]}, ${t.colors.green[5]})`,
+      backgroundImage: (t) => `linear-gradient(225deg, ${t.colors.green[3]}, ${t.colors.green[5]})`,
     },
     indigo: {
-      backgroundImage: t => `linear-gradient(72deg, ${t.colors.indigo[7]}, ${t.colors.indigo[5]})`,
+      backgroundImage: (t) => `linear-gradient(72deg, ${t.colors.indigo[7]}, ${t.colors.indigo[5]})`,
     },
     teal: {
-      backgroundImage: t => `linear-gradient(72deg, ${t.colors.teal[7]}, ${t.colors.teal[5]})`,
+      backgroundImage: (t) => `linear-gradient(72deg, ${t.colors.teal[7]}, ${t.colors.teal[5]})`,
     },
     darkIndigo: {
-      backgroundImage: t => `linear-gradient(135deg, ${t.colors.indigo[8]}, ${t.colors.indigo[6]})`,
+      backgroundImage: (t) => `linear-gradient(135deg, ${t.colors.indigo[8]}, ${t.colors.indigo[6]})`,
     },
     strangerThings: {
       backgroundImage: `radial-gradient(#BA230D, #520506)`,
     },
   },
-}
+})

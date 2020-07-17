@@ -1,4 +1,4 @@
-module.exports = themeOptions => {
+module.exports = (themeOptions) => {
   const basePath = themeOptions.basePath || `/`
   const blogPath = themeOptions.blogPath || `/blog`
   const postsPath = themeOptions.postsPath || `content/posts`
@@ -7,6 +7,7 @@ module.exports = themeOptions => {
   const externalLinks = themeOptions.externalLinks || []
   const navigation = themeOptions.navigation || []
   const showLineNumbers = themeOptions.showLineNumbers || true
+  const formatString = themeOptions.formatString || `DD.MM.YYYY`
 
   return {
     basePath,
@@ -17,5 +18,6 @@ module.exports = themeOptions => {
     externalLinks,
     navigation,
     showLineNumbers,
+    formatString,
   }
 }

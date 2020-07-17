@@ -1,15 +1,19 @@
 /** @jsx jsx */
-import { Styled, jsx } from "theme-ui"
+import React from "react"
+import { jsx } from "theme-ui"
 import { css, Global } from "@emotion/core"
 import SEO from "../../components/seo"
 
-export default ({ children }) => (
-  <Styled.root>
+const Layout = ({ children }) => (
+  <React.Fragment>
     <Global
       styles={css`
         *::before,
         *::after {
           box-sizing: border-box;
+        }
+        html {
+          -webkit-text-size-adjust: 100%;
         }
         body {
           border: 0;
@@ -28,5 +32,7 @@ export default ({ children }) => (
     />
     <SEO />
     <div sx={{ p: 3, maxWidth: 1024, margin: `0 auto` }}>{children}</div>
-  </Styled.root>
+  </React.Fragment>
 )
+
+export default Layout

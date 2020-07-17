@@ -67,6 +67,7 @@ gatsby new emma LekoArts/gatsby-starter-portfolio-emma
 | `projectsPath` | `content/projects` | Location of projects                                                                                      |
 | `pagesPath`    | `content/pages`    | Location of additional pages (optional)                                                                   |
 | `mdx`          | `true`             | Configure `gatsby-plugin-mdx` (if your website already is using the plugin pass `false` to turn this off) |
+| `formatString` | `DD.MM.YYYY`       | Configure the date format for Date fields                                                                 |
 
 The usage of `content/pages` is optional. If no page/MDX file is found the navigation will be hidden.
 
@@ -82,10 +83,10 @@ module.exports = {
         // basePath defaults to `/`
         basePath: `/sideproject`,
         // projectsPath defaults to `content/projects`
-        projectsPath: `content/cool-projects`
-      }
-    }
-  ]
+        projectsPath: `content/cool-projects`,
+      },
+    },
+  ],
 };
 ```
 
@@ -112,8 +113,8 @@ module.exports = {
     // Used for og:image and must be placed inside the `static` folder
     siteImage: `/banner.jpg`,
     // Twitter Handle
-    author: `@lekoarts_de`
-  }
+    author: `@lekoarts_de`,
+  },
 };
 ```
 
@@ -170,3 +171,9 @@ cover: "./name.jpg"
 #### Project Info
 
 You can shadow `src/@lekoarts/gatsby-theme-emma/components/project-info.tsx` to edit the three informational items below the title on the `project` template.
+
+## 🌟 Supporting me
+
+Thanks for using this project! I'm always interested in seeing what people do with my projects, so don't hesitate to tag me on [Twitter](https://twitter.com/lekoarts_de) and share the project with me.
+
+Please star this project, share it on Social Media or consider supporting me on [Patreon](https://www.patreon.com/lekoarts) or [GitHub Sponsor](https://github.com/sponsors/LekoArts)!

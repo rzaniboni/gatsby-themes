@@ -1,7 +1,7 @@
 import React from "react"
 import { Global, css } from "@emotion/core"
 import { graphql } from "gatsby"
-import Helmet from "react-helmet"
+import { Helmet } from "react-helmet"
 import { Grid, Info } from "@lekoarts/gatsby-theme-status-dashboard"
 
 const Index = ({
@@ -28,6 +28,9 @@ const Index = ({
           ::selection {
             color: #fff;
             background-color: #3490dc;
+          }
+          html {
+            -webkit-text-size-adjust: 100%;
           }
           body {
             border: 0;
@@ -81,6 +84,7 @@ const Index = ({
         {siteDescription}
       </p>
       <Info />
+      <div css={css({ marginTop: `1rem` })} />
       <Grid />
       <footer
         css={css({
@@ -93,7 +97,7 @@ const Index = ({
       >
         Copyright &copy; {new Date().getFullYear()}. All rights reserved.
         <br />
-        <div css={css({ display: `flex`, justifyContent: `center`, alignItems: `center`, marginTop: `1.5rem` })}>
+        <div css={css({ display: `flex`, justifyContent: `center`, alignItems: `center`, marginTop: `1rem` })}>
           <img width="30" height="30" src="https://img.lekoarts.de/gatsby/logo_w30.png" alt="LekoArts Logo" />
           {` `}
           <a

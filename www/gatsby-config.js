@@ -2,7 +2,8 @@ require(`dotenv`).config({
   path: `.env`,
 })
 
-const newsletterFeed = require(`./src/utils/feed`)
+const thoughtsFeed = require(`./src/utils/feed`)
+const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 
 module.exports = {
   siteMetadata: {
@@ -26,8 +27,24 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `newsletter`,
-        path: `${__dirname}/newsletter`,
+        name: `thoughts`,
+        path: `${__dirname}/thoughts`,
+      },
+    },
+    {
+      resolve: `gatsby-source-github-api`,
+      options: {
+        token: process.env.GITHUB_TOKEN,
+        variables: {},
+        graphQLQuery: `
+          query {
+            repository(owner: "LekoArts", name: "gatsby-themes") {
+              stargazers {
+                totalCount
+              }
+            }
+          }
+        `,
       },
     },
     {
@@ -61,7 +78,7 @@ module.exports = {
     `gatsby-plugin-theme-ui`,
     {
       resolve: `gatsby-plugin-feed`,
-      options: newsletterFeed,
+      options: thoughtsFeed,
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -89,6 +106,13 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-netlify`,
-    // `gatsby-plugin-webpack-bundle-analyser-v2`,
-  ],
+    shouldAnalyseBundle && {
+      resolve: `gatsby-plugin-webpack-bundle-analyser-v2`,
+      options: {
+        analyzerMode: `static`,
+        reportFilename: `_bundle.html`,
+        openAnalyzer: false,
+      },
+    },
+  ].filter(Boolean),
 }

@@ -1,6 +1,6 @@
 {
   "name": "@lekoarts/gatsby-theme-graphql-playground",
-  "version": "1.0.9",
+  "version": "1.1.11",
   "author": "LekoArts <hello@lekoarts.de>",
   "description": "GraphQL Playground to showcase the power of GraphQL. Write your queries and documentation with MDX and display queries in an interactive GraphiQL window. It can source from your localhost or a remote URL (e.g. Codesandbox).",
   "license": "MIT",
@@ -20,21 +20,19 @@
     "react-dom": "^16.11.0"
   },
   "dependencies": {
-    "@emotion/core": "^10.0.27",
-    "@mdx-js/mdx": "^1.5.5",
-    "@mdx-js/react": "^1.5.5",
-    "@theme-ui/presets": "^0.2.44",
-    "@theme-ui/prism": "^0.2.50",
-    "@theme-ui/sidenav": "^0.2.53",
-    "gatsby-plugin-mdx": "^1.0.70",
-    "gatsby-plugin-react-helmet": "^3.1.22",
-    "gatsby-plugin-theme-ui": "^0.2.53",
-    "gatsby-plugin-typescript": "^2.1.27",
-    "gatsby-source-filesystem": "^2.1.48",
+    "@mdx-js/mdx": "^1.6.6",
+    "@theme-ui/presets": "^0.3.0",
+    "@theme-ui/prism": "^0.3.0",
+    "@theme-ui/sidenav": "^0.3.1",
+    "gatsby-plugin-mdx": "^1.2.25",
+    "gatsby-plugin-react-helmet": "^3.3.10",
+    "gatsby-plugin-theme-ui": "^0.3.0",
+    "gatsby-plugin-typescript": "^2.4.14",
+    "gatsby-source-filesystem": "^2.3.19",
     "is-absolute-url": "^3.0.3",
-    "re-resizable": "^6.1.1",
-    "react-helmet": "^5.2.1",
-    "theme-ui": "^0.2.52"
+    "re-resizable": "^6.5.4",
+    "react-helmet": "^6.1.0",
+    "theme-ui": "^0.3.1"
   },
   "keywords": [
     "gatsby",

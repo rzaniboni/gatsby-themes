@@ -1,5 +1,6 @@
+/** @jsx jsx */
 import React from "react"
-import { css } from "theme-ui"
+import { jsx } from "theme-ui"
 import { ParallaxLayer } from "react-spring/renderprops-addons.cjs"
 
 type DividerProps = {
@@ -13,9 +14,18 @@ type DividerProps = {
   factor?: number
 }
 
-const Divider = ({ speed, offset, factor, bg, fill, clipPath, children, className }: DividerProps) => (
+const Divider = ({
+  speed,
+  offset,
+  factor = 1,
+  bg = ``,
+  fill = ``,
+  clipPath = ``,
+  children = null,
+  className = ``,
+}: DividerProps) => (
   <ParallaxLayer
-    css={css({
+    sx={{
       position: `absolute`,
       width: `full`,
       height: `full`,
@@ -26,10 +36,10 @@ const Divider = ({ speed, offset, factor, bg, fill, clipPath, children, classNam
         fill: `currentColor`,
       },
       clipPath,
-    })}
+    }}
     speed={speed}
     offset={offset}
-    factor={factor || 1}
+    factor={factor}
     className={className}
   >
     {children}

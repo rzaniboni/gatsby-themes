@@ -49,8 +49,10 @@ Also be sure to checkout other [Free & Open Source Gatsby Themes](https://themes
 ## Installation
 
 ```sh
-npm install @lekoarts/gatsby-theme-specimens
+npm install @lekoarts/gatsby-theme-specimens theme-ui
 ```
+
+This theme has `theme-ui` defined as a `peerDependency` so make sure to also install it if you don't use it already.
 
 ### Install as a starter
 
@@ -129,9 +131,9 @@ export default {
   ...baseTheme,
   alerts: {
     hint: {
-      padding: `3rem`
-    }
-  }
+      padding: `3rem`,
+    },
+  },
 };
 ```
 
@@ -164,7 +166,7 @@ import {
   Shadow,
   Space,
   Table,
-  Video
+  Video,
 } from "@lekoarts/gatsby-theme-specimens";
 
 export default {
@@ -218,7 +220,7 @@ export default {
       poster={poster}
       src={src}
     />
-  )
+  ),
 };
 ```
 
@@ -232,6 +234,4 @@ This way you are able to use the components directly in your MDX file without im
 
 Thanks for using this project! I'm always interested in seeing what people do with my projects, so don't hesitate to tag me on [Twitter](https://twitter.com/lekoarts_de) and share the project with me.
 
-Please star this project, share it on Social Media or consider supporting me on [Patreon](https://www.patreon.com/lekoarts)!
-
-If you want to hire me for **contract/freelance work**, you can do so! [Get in touch with me!](https://www.lekoarts.de/en/contact)
+Please star this project, share it on Social Media or consider supporting me on [Patreon](https://www.patreon.com/lekoarts) or [GitHub Sponsor](https://github.com/sponsors/LekoArts)!

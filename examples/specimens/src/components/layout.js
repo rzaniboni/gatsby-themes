@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { css, Global } from "@emotion/core"
-import Helmet from "react-helmet"
+import { Helmet } from "react-helmet"
 
 const Layout = ({ children }) => {
   const { site } = useStaticQuery(graphql`
@@ -47,6 +47,10 @@ const Layout = ({ children }) => {
           ::selection {
             color: #fff;
             background-color: #3490dc;
+          }
+          html {
+            font-size: 16px;
+            -webkit-text-size-adjust: 100%;
           }
           body {
             border: 0;

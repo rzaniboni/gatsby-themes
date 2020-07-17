@@ -31,7 +31,7 @@ Get **high-quality** and **customizable** Gatsby themes to quickly bootstrap you
 This repository is a collection of my Gatsby themes, managed as a [monorepo](https://trunkbaseddevelopment.com/monorepos/) with [Lerna](https://github.com/lerna/lerna) and [yarn workspaces](https://yarnpkg.com/lang/en/docs/workspaces/).
 
 - `.circleci`: Contains the configuration file for CircleCI
-- `.github`: GitHub actions, templates for issues, and FUNDING file
+- `.github`: GitHub actions, templates for issues, and FUNDING file. A GitHub action will publish the `/examples` as starters to individual GitHub repositories.
 - `cypress`: Contains the Cypress tests for `examples`
 - `examples`: Contains the corresponding example sites for the `themes`. These projects can and should be used as a starter and will be copied over to their own repository. Hence they contain example data and additional Gatsby plugins (e.g. `gatsby-plugin-manifest` and `gatsby-plugin-offline`). The folder names are the contents after `gatsby-theme-*`
 - `jest`: Primarily files for mocking functions/files in Jest tests
@@ -62,9 +62,11 @@ Commit your changes to a feature branch of your fork and open up a PR against th
 
 Have a look at the [contributing guide](CONTRIBUTING.md) to learn more.
 
-## 🤩 Newsletter
+## 🤩 Support Me
 
-If you want to receive monthly updates on my themes and all things related to Gatsby themes (relevant blog posts from me and other people, articles about Theme UI) you can [subscribe to my newsletter](https://leko.io/newsletter-themes).
+Thanks for using this project! I'm always interested in seeing what people do with my projects, so don't hesitate to tag me on [Twitter](https://twitter.com/lekoarts_de) and share the project with me.
+
+Please star this project, share it on Social Media or consider supporting me on [Patreon](https://www.patreon.com/lekoarts) or [GitHub Sponsor](https://github.com/sponsors/LekoArts)!
 
 ## 🎓 Learning Gatsby Themes
 

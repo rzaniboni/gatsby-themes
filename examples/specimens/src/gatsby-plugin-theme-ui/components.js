@@ -25,7 +25,7 @@ import {
 import { preToCodeBlock } from "mdx-utils"
 import Code from "../components/code"
 
-const heading = Tag => props =>
+const heading = (Tag) => (props) =>
   props.id ? (
     <Tag {...props} id={props.id}>
       <a
@@ -45,7 +45,7 @@ const heading = Tag => props =>
     <Tag {...props} />
   )
 
-const components = {
+const shortcodes = {
   Alert: ({ type, children }) => <Alert type={type}>{children}</Alert>,
   Audio: ({ autoplay, loop, name, desc, src }) => (
     <Audio autoplay={autoplay} loop={loop} name={name} desc={desc} src={src} />
@@ -62,7 +62,7 @@ const components = {
   FontFamily: ({ fonts, previewText }) => <FontFamily fonts={fonts} previewText={previewText} />,
   FontSize: ({ fontSizes }) => <FontSize fontSizes={fontSizes} />,
   FontWeight: ({ fontWeights, previewText }) => <FontWeight fontWeights={fontWeights} previewText={previewText} />,
-  Heading: ({ styles, theme, previewText }) => <Heading styles={styles} theme={theme} previewText={previewText} />,
+  Heading: ({ styles, config, previewText }) => <Heading styles={styles} config={config} previewText={previewText} />,
   Palette: ({ colors, mode, single, minimal, prefix }) => (
     <Palette colors={colors} mode={mode} single={single} minimal={minimal} prefix={prefix} />
   ),
@@ -78,14 +78,14 @@ const components = {
   ),
 }
 
-export default {
-  ...components,
+const components = {
+  ...shortcodes,
   h2: heading(`h2`),
   h3: heading(`h3`),
   h4: heading(`h4`),
   h5: heading(`h5`),
   h6: heading(`h6`),
-  pre: preProps => {
+  pre: (preProps) => {
     const props = preToCodeBlock(preProps)
     // if there's a codeString and some props, we passed the test
     if (props) {
@@ -96,3 +96,5 @@ export default {
   },
   wrapper: ({ children }) => <React.Fragment>{children}</React.Fragment>,
 }
+
+export default components

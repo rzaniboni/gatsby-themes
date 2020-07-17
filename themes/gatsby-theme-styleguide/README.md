@@ -43,8 +43,10 @@ Also be sure to checkout other [Free & Open Source Gatsby Themes](https://themes
 ## Installation
 
 ```sh
-npm install @lekoarts/gatsby-theme-styleguide
+npm install @lekoarts/gatsby-theme-styleguide theme-ui
 ```
+
+This theme has `theme-ui` defined as a `peerDependency` so make sure to also install it if you don't use it already.
 
 ### Install as a starter
 
@@ -103,6 +105,4 @@ Please keep in mind that you can shadow `.tsx` files also with `.js`/`.jsx` file
 
 Thanks for using this project! I'm always interested in seeing what people do with my projects, so don't hesitate to tag me on [Twitter](https://twitter.com/lekoarts_de) and share the project with me.
 
-Please star this project, share it on Social Media or consider supporting me on [Patreon](https://www.patreon.com/lekoarts)!
-
-If you want to hire me for **contract/freelance work**, you can do so! [Get in touch with me!](https://www.lekoarts.de/en/contact)
+Please star this project, share it on Social Media or consider supporting me on [Patreon](https://www.patreon.com/lekoarts) or [GitHub Sponsor](https://github.com/sponsors/LekoArts)!

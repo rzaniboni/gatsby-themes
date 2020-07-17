@@ -4,12 +4,15 @@ import TagComponent from "../components/tag"
 export default TagComponent
 
 export const query = graphql`
-  query($slug: String!) {
+  query($slug: String!, $formatString: String!) {
     allPost(sort: { fields: date, order: DESC }, filter: { tags: { elemMatch: { slug: { eq: $slug } } } }) {
       nodes {
         slug
         title
-        date(formatString: "DD.MM.YYYY")
+        date(formatString: $formatString)
+        excerpt
+        timeToRead
+        description
         tags {
           name
           slug

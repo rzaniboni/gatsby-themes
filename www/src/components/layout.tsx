@@ -1,14 +1,14 @@
 import React from "react"
 import { Global } from "@emotion/core"
-import { Main, css, Styled, Footer, useColorMode } from "theme-ui"
-import "typeface-ibm-plex-sans"
-import "../fonts/benguiat.css"
+import { Styled, Box, useColorMode } from "theme-ui"
 import SEO from "./seo"
 import Header from "./header"
+import "typeface-ibm-plex-sans"
+import "../fonts/benguiat.css"
 
-type LayoutProps = { children: React.ReactNode; className?: string; newsletter?: boolean }
+type LayoutProps = { children: React.ReactNode; className?: string; thought?: boolean }
 
-const Layout = ({ children, className, newsletter }: LayoutProps) => {
+const Layout = ({ children, className = ``, thought = false }: LayoutProps) => {
   const [mode] = useColorMode()
 
   let headingStyles = {}
@@ -30,23 +30,9 @@ const Layout = ({ children, className, newsletter }: LayoutProps) => {
   return (
     <>
       <Global
-        styles={css({
+        styles={(theme) => ({
           "*": {
             boxSizing: `inherit`,
-          },
-          body: {
-            margin: 0,
-            padding: 0,
-            boxSizing: `border-box`,
-            textRendering: `optimizeLegibility`,
-            fontSize: `18px`,
-            WebkitFontSmoothing: `antialiased`,
-            MozOsxFontSmoothing: `grayscale`,
-            color: `text`,
-            backgroundColor: `background`,
-            fontFamily: `body`,
-            lineHeight: `body`,
-            fontWeight: `body`,
           },
           "::selection": {
             backgroundColor: `text`,
@@ -67,10 +53,12 @@ const Layout = ({ children, className, newsletter }: LayoutProps) => {
           ...headingStyles,
         })}
       />
-      {!newsletter && <SEO />}
+      {!thought && <SEO />}
       <Header />
-      <Main className={className}>{children}</Main>
-      <Footer>
+      <Box as="main" className={className}>
+        {children}
+      </Box>
+      <Box as="footer" variant="layout.footer">
         &copy; {new Date().getFullYear()} by <Styled.a href="https://www.lekoarts.de/en">LekoArts</Styled.a>. All rights
         reserved.{` `}
         <Styled.a rel="nofollow" href="https://www.lekoarts.de/en/imprint">
@@ -83,7 +71,7 @@ const Layout = ({ children, className, newsletter }: LayoutProps) => {
         .<br />
         This website is open source on{` `}
         <Styled.a href="https://github.com/LekoArts/gatsby-themes/tree/master/www">GitHub</Styled.a>.
-      </Footer>
+      </Box>
     </>
   )
 }

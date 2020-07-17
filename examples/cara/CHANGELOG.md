@@ -3,6 +3,196 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/LekoArts/gatsby-themes/compare/cara@0.1.10...cara@0.2.0) (2020-07-09)
+
+
+### Features
+
+* Add bundle-analyzer and lazy-load react-live ([#450](https://github.com/LekoArts/gatsby-themes/issues/450)) ([667fd33](https://github.com/LekoArts/gatsby-themes/commit/667fd33ce6af546cf2250af1e22395a26f45d6a2))
+
+
+
+
+
+## [0.1.10](https://github.com/LekoArts/gatsby-themes/compare/cara@0.1.9...cara@0.1.10) (2020-07-09)
+
+**Note:** Version bump only for package cara
+
+
+
+
+
+## [0.1.9](https://github.com/LekoArts/gatsby-themes/compare/cara@0.1.8...cara@0.1.9) (2020-07-03)
+
+**Note:** Version bump only for package cara
+
+
+
+
+
+## [0.1.8](https://github.com/LekoArts/gatsby-themes/compare/cara@0.1.7...cara@0.1.8) (2020-07-02)
+
+**Note:** Version bump only for package cara
+
+
+
+
+
+## [0.1.7](https://github.com/LekoArts/gatsby-themes/compare/cara@0.1.6...cara@0.1.7) (2020-06-11)
+
+**Note:** Version bump only for package cara
+
+
+
+
+
+## [0.1.6](https://github.com/LekoArts/gatsby-themes/compare/cara@0.1.5...cara@0.1.6) (2020-06-08)
+
+**Note:** Version bump only for package cara
+
+
+
+
+
+## [0.1.5](https://github.com/LekoArts/gatsby-themes/compare/cara@0.1.4...cara@0.1.5) (2020-05-29)
+
+**Note:** Version bump only for package cara
+
+
+
+
+
+## [0.1.4](https://github.com/LekoArts/gatsby-themes/compare/cara@0.1.3...cara@0.1.4) (2020-05-12)
+
+**Note:** Version bump only for package cara
+
+
+
+
+
+## [0.1.3](https://github.com/LekoArts/gatsby-themes/compare/cara@0.1.2...cara@0.1.3) (2020-05-04)
+
+**Note:** Version bump only for package cara
+
+
+
+
+
+## [0.1.2](https://github.com/LekoArts/gatsby-themes/compare/cara@0.1.1...cara@0.1.2) (2020-05-02)
+
+**Note:** Version bump only for package cara
+
+
+
+
+
+## [0.1.1](https://github.com/LekoArts/gatsby-themes/compare/cara@0.1.0...cara@0.1.1) (2020-04-28)
+
+**Note:** Version bump only for package cara
+
+
+
+
+
+# [0.1.0](https://github.com/LekoArts/gatsby-themes/compare/cara@0.0.32...cara@0.1.0) (2020-04-27)
+
+
+### Features
+
+* Update theme-ui to v0.3.x ([#371](https://github.com/LekoArts/gatsby-themes/issues/371)) ([67a05ac](https://github.com/LekoArts/gatsby-themes/commit/67a05ac3e1deaddfe38591739e7f50f56d49d109)), closes [/theme-ui.com/migrating#v03](https://github.com//theme-ui.com/migrating/issues/v03) [#262](https://github.com/LekoArts/gatsby-themes/issues/262)
+
+
+
+
+
+## [0.0.32](https://github.com/LekoArts/gatsby-themes/compare/cara@0.0.31...cara@0.0.32) (2020-04-24)
+
+**Note:** Version bump only for package cara
+
+
+
+
+
+## [0.0.31](https://github.com/LekoArts/gatsby-themes/compare/cara@0.0.30...cara@0.0.31) (2020-04-13)
+
+**Note:** Version bump only for package cara
+
+
+
+
+
+## [0.0.30](https://github.com/LekoArts/gatsby-themes/compare/cara@0.0.29...cara@0.0.30) (2020-04-13)
+
+**Note:** Version bump only for package cara
+
+
+
+
+
+## [0.0.29](https://github.com/LekoArts/gatsby-themes/compare/cara@0.0.28...cara@0.0.29) (2020-04-12)
+
+**Note:** Version bump only for package cara
+
+
+
+
+
+## [0.0.28](https://github.com/LekoArts/gatsby-themes/compare/cara@0.0.27...cara@0.0.28) (2020-04-12)
+
+**Note:** Version bump only for package cara
+
+
+
+
+
+## [0.0.27](https://github.com/LekoArts/gatsby-themes/compare/cara@0.0.26...cara@0.0.27) (2020-04-01)
+
+**Note:** Version bump only for package cara
+
+
+
+
+
+## [0.0.26](https://github.com/LekoArts/gatsby-themes/compare/cara@0.0.25...cara@0.0.26) (2020-03-31)
+
+**Note:** Version bump only for package cara
+
+
+
+
+
+## [0.0.25](https://github.com/LekoArts/gatsby-themes/compare/cara@0.0.24...cara@0.0.25) (2020-03-04)
+
+**Note:** Version bump only for package cara
+
+
+
+
+
+## [0.0.24](https://github.com/LekoArts/gatsby-themes/compare/cara@0.0.23...cara@0.0.24) (2020-02-29)
+
+**Note:** Version bump only for package cara
+
+
+
+
+
+## [0.0.23](https://github.com/LekoArts/gatsby-themes/compare/cara@0.0.22...cara@0.0.23) (2020-02-27)
+
+**Note:** Version bump only for package cara
+
+
+
+
+
+## [0.0.22](https://github.com/LekoArts/gatsby-themes/compare/cara@0.0.21...cara@0.0.22) (2020-02-16)
+
+**Note:** Version bump only for package cara
+
+
+
+
+
 ## [0.0.21](https://github.com/LekoArts/gatsby-themes/compare/cara@0.0.20...cara@0.0.21) (2020-01-23)
 
 

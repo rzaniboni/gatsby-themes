@@ -1,20 +1,9 @@
 import React from "react"
-import Helmet from "react-helmet"
+import { Helmet } from "react-helmet"
 import useSiteMetadata from "../hooks/use-site-metadata"
 import useBuildTime from "../hooks/use-build-time"
 
-const defaultProps = {
-  description: false,
-  meta: [],
-  pathname: false,
-  image: false,
-  title: false,
-  newsletter: false,
-  datePublished: false,
-  info: false,
-}
-
-type Props = {
+type SEOProps = {
   description?: string
   meta?:
     | {
@@ -31,12 +20,21 @@ type Props = {
   pathname?: string
   image?: string
   title?: string
-  newsletter?: boolean
+  thought?: boolean
   datePublished?: string
   info?: string
 }
 
-const SEO = ({ description, meta, pathname, image, title, newsletter, datePublished, info }: Props) => {
+const SEO = ({
+  description = ``,
+  meta = [],
+  pathname = ``,
+  image = ``,
+  title = ``,
+  thought = false,
+  datePublished = ``,
+  info = ``,
+}: SEOProps) => {
   const site = useSiteMetadata()
   const buildTime = useBuildTime()
 
@@ -159,7 +157,7 @@ const SEO = ({ description, meta, pathname, image, title, newsletter, datePublis
     },
     speakable: {
       "@type": `SpeakableSpecification`,
-      cssSelector: [`.newsletter-speakable`],
+      cssSelector: [`.thought-speakable`],
     },
     url: seo.url,
   }
@@ -217,19 +215,17 @@ const SEO = ({ description, meta, pathname, image, title, newsletter, datePublis
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5a67d8" />
       <meta name="msapplication-TileColor" content="#f7fafc" />
-      {newsletter && <meta name="article:published_time" content={datePublished} />}
+      {thought && <meta name="article:published_time" content={datePublished} />}
       <script type="application/ld+json">{JSON.stringify(orgaCreator(`identity`))}</script>
       <script type="application/ld+json">{JSON.stringify(orgaCreator(`creator`))}</script>
-      {newsletter ? (
+      {thought ? (
         <script type="application/ld+json">{JSON.stringify(schemaNewsletter)}</script>
       ) : (
         <script type="application/ld+json">{JSON.stringify(schemaHomepage)}</script>
       )}
-      {newsletter && <script type="application/ld+json">{JSON.stringify(breadcrumbs)}</script>}
+      {thought && <script type="application/ld+json">{JSON.stringify(breadcrumbs)}</script>}
     </Helmet>
   )
 }
 
 export default SEO
-
-SEO.defaultProps = defaultProps

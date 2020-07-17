@@ -1,16 +1,14 @@
+import { merge } from "theme-ui"
 import { tailwind } from "@theme-ui/presets"
 
-export default {
-  ...tailwind,
+export default merge(tailwind, {
   colors: {
-    ...tailwind.colors,
     primary: tailwind.colors.blue[6],
     secondary: tailwind.colors.orange[6],
     muted: tailwind.colors.gray[6],
     textMuted: `#69778c`,
   },
   styles: {
-    ...tailwind.styles,
     a: {
       color: `textMuted`,
       textDecoration: `none`,
@@ -40,7 +38,7 @@ export default {
     },
     icon: {
       svg: {
-        width: [6, 6, 8],
+        width: 8,
         borderRadius: `full`,
         p: 2,
         background: `white`,
@@ -72,4 +70,4 @@ export default {
       gridGap: [3, 3, 4],
     },
   },
-}
+})

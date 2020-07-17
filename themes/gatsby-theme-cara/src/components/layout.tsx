@@ -1,15 +1,15 @@
 /** @jsx jsx */
 import React from "react"
 import { Global } from "@emotion/core"
-import { css, Styled, jsx } from "theme-ui"
+import { jsx } from "theme-ui"
 import SEO from "./seo"
 
-type LayoutProps = { children?: React.ReactNode; className?: string }
+type LayoutProps = { children: React.ReactNode; className?: string }
 
-const Layout = ({ children, className }: LayoutProps) => (
-  <Styled.root data-testid="theme-root">
+const Layout = ({ children, className = `` }: LayoutProps) => (
+  <React.Fragment>
     <Global
-      styles={css({
+      styles={(theme) => ({
         "*": {
           boxSizing: `inherit`,
           "&:before": {
@@ -21,24 +21,27 @@ const Layout = ({ children, className }: LayoutProps) => (
         },
         html: {
           fontSize: `18px`,
+          WebkitTextSizeAdjust: `100%`,
         },
-        body: {
-          margin: 0,
-          padding: 0,
-          boxSizing: `border-box`,
-          textRendering: `optimizeLegibility`,
-          WebkitFontSmoothing: `antialiased`,
-          MozOsxFontSmoothing: `grayscale`,
+        img: {
+          borderStyle: `none`,
+        },
+        pre: {
+          fontFamily: `monospace`,
+          fontSize: `1em`,
+        },
+        "[hidden]": {
+          display: `none`,
         },
         "::selection": {
-          backgroundColor: `primary`,
-          color: `white`,
+          backgroundColor: theme.colors.primary,
+          color: theme.colors.background,
         },
       })}
     />
     <SEO />
     <main className={className}>{children}</main>
-  </Styled.root>
+  </React.Fragment>
 )
 
 export default Layout

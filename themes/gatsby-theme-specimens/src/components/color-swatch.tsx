@@ -25,7 +25,7 @@ type ColorSwatchProps = {
   prefix?: string
 }
 
-const ColorSwatch = ({ color, name, minimal, className, prefix }: ColorSwatchProps) => {
+const ColorSwatch = ({ color, name = ``, minimal = false, className = ``, prefix = `` }: ColorSwatchProps) => {
   const { hex, RGB, CMYK, ratings } = useColorUtils(color)
   const specimensOptions = useSpecimensConfig()
 
@@ -58,7 +58,7 @@ const ColorSwatch = ({ color, name, minimal, className, prefix }: ColorSwatchPro
           position: `relative`,
         }}
       >
-        {ratings.map(rating => (
+        {ratings.map((rating) => (
           <div
             key={`${rating.color}-${rating.size}-${rating.value}`}
             sx={{ display: `flex`, flexDirection: `column`, margin: `0 3px`, width: `50px` }}
